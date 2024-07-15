@@ -1,0 +1,152 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  position: relative;
+  background-image: url('./IMGs_Projeto-20240709T223647Z-001/IMGs_Projeto/FUNDO.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+header {
+  background-color: white;
+  color: rgb(6, 48, 24);
+  padding: 1em 0;
+  text-align: center;
+  z-index: 2;
+  position: relative;
+}
+
+.main-content {
+  padding-top: 2em;
+  z-index: 2;
+  position: relative;
+}
+
+.card {
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  text-align: left;
+  margin-bottom: 1em;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.card-body {
+  padding: 1em;
+}
+
+.footer {
+  background-color: rgba(0, 0, 0, 0.75);
+  color: white;
+  text-align: center;
+  padding: 1rem 0;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  z-index: 2;
+}
+
+.search-bar input {
+  background-color: rgba(255, 255, 255, 0.75);
+  border: 2px solid rgba(6, 48, 24, 0.75);
+  padding: 0.5em;
+  border-radius: 8px;
+  width: 80%;
+  margin: auto;
+  display: block;
+}
+
+.pagination {
+  text-align: center;
+  margin-top: 1em;
+}
+
+.pagination button {
+  background-color: rgba(6, 48, 24, 0.75);
+  color: white;
+  border: none;
+  padding: 0.5em 1em;
+  margin: 0 0.5em;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.pagination button:disabled {
+  background-color: rgba(6, 48, 24, 0.5);
+  cursor: not-allowed;
+}
+
+
+@keyframes fadeInRotateScale {
+  0% {
+    transform: translateY(50%) rotate(-5deg) scale(0.8);
+    opacity: 0;
+  }
+  50% {
+    transform: translateY(0) rotate(0) scale(1.1);
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateY(0) rotate(0) scale(1);
+    opacity: 1;
+  }
+}
+
+
+.card {
+  animation: fadeInRotateScale 0.8s cubic-bezier(0.25, 0.1, 0.25, 1) both;
+  animation-delay: calc(var(--animation-order) * 0.1s); 
+}
+
+
+#character-cards {
+  --animation-order: 0;
+}
+
+#character-cards .col-md-4:nth-child(2) {
+  --animation-order: 1;
+}
+
+#character-cards .col-md-4:nth-child(3) {
+  --animation-order: 2;
+}
+
+#character-cards .col-md-4:nth-child(4) {
+  --animation-order: 3;
+}
+
+#character-cards .col-md-4:nth-child(5) {
+  --animation-order: 4;
+}
+
+#character-cards .col-md-4:nth-child(6) {
+  --animation-order: 5;
+}
+
+@keyframes scaleUp {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.1);
+  }
+}
+
+.card {
+  transition: transform 0.3s ease-out;
+  cursor: pointer; 
+}
+
+.card:hover {
+  animation: scaleUp 0.3s cubic-bezier(0.25, 0.1, 0.25, 1) forwards;
+}

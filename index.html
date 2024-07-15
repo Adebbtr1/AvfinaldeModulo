@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>API Rick and Morty</title>
+  <link rel="stylesheet" href="./style.css">
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <div class="container mt-5">
+      <div class="text-center">
+        <h1><strong>API Rick and Morty</strong></h1>
+        <div class="search-bar mt-4">
+          <input type="text" class="form-control" placeholder="Pesquise" id="search-input" aria-label="Pesquise">
+        </div>
+      </div>
+      <img src="./assets/RICK_MORTY_ICON-01.svg" alt="Ícone Rick and Morty" style="position: absolute; top: 10px; left: 10px; width: 50px;">
+    </div>
+  </header>
+  
+  <main class="main-content">
+    <div class="background-section">
+      <div class="container">
+        <div class="row" id="character-cards"></div>
+        <div class="pagination">
+          <button id="prev-page" disabled>Anterior</button>
+          <span id="page-number">1</span>
+          <button id="next-page">Próxima</button>
+        </div>
+      </div>
+    </div>
+  </main>
+  
+  <div class="footer">
+    <div class="container mt-5">
+      <p class="text-center text-white">PERSONAGENS: <span id="character-count">XX</span> | LOCALIZAÇÕES: <span id="location-count">XX</span> | EPISÓDIOS: <span id="episode-count">XX</span></p>
+      <p class="text-center text-white">Desenvolvido por: DÉBORA SANTOS em 2024</p>
+    </div>
+  </div>
+  
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="./js/home.js"></script>
+</body>
+</html>
